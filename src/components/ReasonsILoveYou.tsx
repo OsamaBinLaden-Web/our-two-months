@@ -2,17 +2,11 @@ import { motion } from "framer-motion";
 
 const reasons = [
   "The way you scrunch your nose when you laugh. It's the most adorable thing I've ever seen.",
-  "How you make even the most boring college day feel exciting just by being there.",
-  "Your determination. Watching you study so hard makes me want to be a better person too.",
-  "Those random voice notes you send me when you're too lazy to type. I replay them more than you know.",
-  "The way you look at me when you think I'm not noticing. I always notice.",
-  "How you get excited about the smallest things. Your happiness is so contagious.",
-  "Your honesty. You never sugarcoat anything and I love that about you.",
   "The comfort I feel when I'm with you. Like I can just be myself, no pretending.",
-  "Your taste in music. You introduced me to songs that are now my favorites.",
-  "How you always know when something's off with me, even when I try to hide it.",
-  "The way you hold my hand. It just feels right.",
+  "The way you look at me when you think I'm not noticing. I always notice.",
   "Simply because you're you, and there's nobody else I'd rather be with.",
+  "How you always know when something's off with me, even when I try to hide it.",
+  "Your taste in music. You introduced me to songs that are now my favorites.",
 ];
 
 const ReasonsILoveYou = () => {
