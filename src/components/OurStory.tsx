@@ -1,69 +1,60 @@
 import { motion } from "framer-motion";
+import SplitText from "@/components/animations/SplitText";
+import BlurText from "@/components/animations/BlurText";
+import FadeContent from "@/components/animations/FadeContent";
 
 const moments = [
-  {
-    date: "December 10, 2024",
-    title: "The day it all began",
-    description: "I still remember that feeling when we made it official. My heart was racing and I couldn't stop smiling for days.",
-    emoji: "💕",
-  },
-  {
-    date: "December 2024",
-    title: "Getting to know each other",
-    description: "Those early days of long conversations, staying up late texting, learning all the little things about you that made me fall harder every day.",
-    emoji: "💬",
-  },
-  {
-    date: "January 2025",
-    title: "Our first month together",
-    description: "A whole month of us! Every moment felt new and exciting. I started realizing just how lucky I am to have you in my life.",
-    emoji: "🎉",
-  },
-  {
-    date: "January/February 2025",
-    title: "Study dates and stolen glances",
-    description: "Sitting next to you in college, pretending to focus on notes while sneaking looks at you. Those are some of my favorite memories.",
-    emoji: "📚",
-  },
-  {
-    date: "February 11, 2025",
-    title: "Two months of us!",
-    description: "Here we are, two months in, and I'm more sure about you than ever. This is just the beginning of our story.",
-    emoji: "❤️",
-  },
+  { date: "December 10, 2024", title: "The day it all began", emoji: "💕" },
+  { date: "December 2024", title: "Getting to know each other", emoji: "💬" },
+  { date: "January 2025", title: "Our first month together", emoji: "🎉" },
+  { date: "January/February 2025", title: "Study dates and stolen glances", emoji: "📚" },
+  { date: "February 11, 2025", title: "Two months of us!", emoji: "❤️" },
 ];
 
 const OurStory = () => {
   return (
     <section className="py-20 px-4 bg-valentine">
       <div className="max-w-3xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
+        <FadeContent blur>
           <h2 className="font-display text-4xl md:text-5xl text-center text-foreground mb-4">
-            Our Story So Far 💫
+            <SplitText text="Our Story So Far 💫" splitBy="words" duration={0.1} />
           </h2>
+        </FadeContent>
+        <FadeContent blur delay={0.3}>
           <p className="font-body text-center text-muted-foreground mb-14 max-w-md mx-auto">
-            Two months might sound short, but with you it feels like I've found something that'll last forever
+            <BlurText text="Two months might sound short, but with you it feels like I've found something that'll last forever" delay={0.4} />
           </p>
-        </motion.div>
+        </FadeContent>
 
         <div className="space-y-8">
           {moments.map((moment, i) => (
-            <motion.div
+            <FadeContent
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="glass-card p-6"
+              direction={i % 2 === 0 ? "left" : "right"}
+              delay={i * 0.15}
+              blur
+              distance={60}
             >
-              <div className="text-3xl mb-3">{moment.emoji}</div>
-              <p className="font-body text-sm text-primary mb-1">{moment.date}</p>
-              <h3 className="font-display text-xl text-foreground">{moment.title}</h3>
-            </motion.div>
+              <motion.div
+                className="glass-card p-6"
+                whileHover={{
+                  scale: 1.03,
+                  x: i % 2 === 0 ? 10 : -10,
+                  boxShadow: "0 15px 35px -10px hsl(var(--primary) / 0.25)",
+                }}
+                transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              >
+                <motion.div
+                  className="text-3xl mb-3"
+                  whileHover={{ scale: 1.3, rotate: 15 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                >
+                  {moment.emoji}
+                </motion.div>
+                <p className="font-body text-sm text-primary mb-1">{moment.date}</p>
+                <h3 className="font-display text-xl text-foreground">{moment.title}</h3>
+              </motion.div>
+            </FadeContent>
           ))}
         </div>
       </div>
