@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import SplitText from "@/components/animations/SplitText";
+import FadeContent from "@/components/animations/FadeContent";
+import RotateIn from "@/components/animations/RotateIn";
 import photo1 from "@/assets/photo1.jpeg";
 import photo2 from "@/assets/photo2.jpeg";
 import photo3 from "@/assets/photo3.jpeg";
@@ -24,39 +27,38 @@ const photos = [
 const PhotoGallery = () => {
   return (
     <section className="py-20 px-4 md:px-8">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="max-w-6xl mx-auto"
-      >
-        <h2 className="font-display text-4xl md:text-5xl text-center text-foreground mb-12">
-          Our Moments
-        </h2>
+      <div className="max-w-6xl mx-auto">
+        <FadeContent blur>
+          <h2 className="font-display text-4xl md:text-5xl text-center text-foreground mb-12">
+            <SplitText text="Our Moments" splitBy="chars" duration={0.04} />
+          </h2>
+        </FadeContent>
 
         <div className="columns-2 md:columns-3 gap-4 space-y-4">
           {photos.map((photo, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="break-inside-avoid group"
-            >
-              <div className="glass-card overflow-hidden p-2">
-                <img
+            <RotateIn key={i} delay={i * 0.1} className="break-inside-avoid">
+              <motion.div
+                className="glass-card overflow-hidden p-2 group cursor-pointer"
+                whileHover={{
+                  scale: 1.04,
+                  rotate: Math.random() > 0.5 ? 2 : -2,
+                  boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.3)",
+                }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <motion.img
                   src={photo.src}
                   alt={photo.caption}
-                  className="w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="w-full rounded-xl object-cover"
                   loading="lazy"
+                  whileHover={{ scale: 1.08 }}
+                  transition={{ duration: 0.4 }}
                 />
-              </div>
-            </motion.div>
+              </motion.div>
+            </RotateIn>
           ))}
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

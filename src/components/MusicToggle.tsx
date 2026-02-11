@@ -9,7 +9,7 @@ const MusicToggle = () => {
   useEffect(() => {
     // Using a public YouTube audio source isn't possible directly.
     // Place your audio file at public/music/kadhal-en-kaviye.mp3
-    const audio = new Audio("/music/kadhal-en-kaviye.mp3");
+    const audio = new Audio("/music/kadhal-en-kaviye.webm");
     audio.loop = true;
     audio.volume = 0.3;
     audioRef.current = audio;
