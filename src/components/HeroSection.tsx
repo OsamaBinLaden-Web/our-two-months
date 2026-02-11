@@ -25,9 +25,6 @@ const HeroSection = () => {
           Since December 10, 2024
         </p>
 
-        <p className="font-body text-lg text-muted-foreground/80">
-          Every single day with you has felt like magic, and I wouldn't trade any of it for the world.
-        </p>
 
         <motion.div
           className="mt-10"

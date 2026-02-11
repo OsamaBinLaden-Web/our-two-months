@@ -62,8 +62,7 @@ const OurStory = () => {
             >
               <div className="text-3xl mb-3">{moment.emoji}</div>
               <p className="font-body text-sm text-primary mb-1">{moment.date}</p>
-              <h3 className="font-display text-xl text-foreground mb-2">{moment.title}</h3>
-              <p className="font-body text-muted-foreground leading-relaxed">{moment.description}</p>
+              <h3 className="font-display text-xl text-foreground">{moment.title}</h3>
             </motion.div>
           ))}
         </div>

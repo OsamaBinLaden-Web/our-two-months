@@ -31,12 +31,9 @@ const PhotoGallery = () => {
         transition={{ duration: 0.6 }}
         className="max-w-6xl mx-auto"
       >
-        <h2 className="font-display text-4xl md:text-5xl text-center text-foreground mb-4">
-          Our Moments 📸
+        <h2 className="font-display text-4xl md:text-5xl text-center text-foreground mb-12">
+          Our Moments
         </h2>
-        <p className="font-body text-center text-muted-foreground mb-12 max-w-lg mx-auto">
-          Every photo with you tells a story I never want to stop reading
-        </p>
 
         <div className="columns-2 md:columns-3 gap-4 space-y-4">
           {photos.map((photo, i) => (
@@ -55,9 +52,6 @@ const PhotoGallery = () => {
                   className="w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
                 />
-                <p className="font-body text-sm text-muted-foreground text-center mt-2 pb-1">
-                  {photo.caption}
-                </p>
               </div>
             </motion.div>
           ))}
