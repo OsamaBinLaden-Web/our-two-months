@@ -8,6 +8,7 @@ import ReasonsILoveYou from "@/components/ReasonsILoveYou";
 import FutureMessage from "@/components/FutureMessage";
 import FloatingHearts from "@/components/FloatingHearts";
 import MusicToggle from "@/components/MusicToggle";
+import ParallaxBackground from "@/components/ParallaxBackground";
 
 const Index = () => {
   const [accepted, setAccepted] = useState(false);
@@ -43,6 +44,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-romantic relative overflow-hidden">
+      <ParallaxBackground />
       <FloatingHearts />
       <MusicToggle />
       <motion.div
