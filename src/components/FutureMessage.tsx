@@ -6,7 +6,7 @@ import ShinyText from "@/components/animations/ShinyText";
 
 const FutureMessage = () => {
   return (
-    <section className="py-24 px-4 bg-valentine">
+    <section id="future" className="py-24 px-4 bg-valentine">
       <div className="max-w-2xl mx-auto text-center">
         <FadeContent blur>
           <motion.div

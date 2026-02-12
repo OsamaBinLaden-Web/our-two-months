@@ -15,7 +15,7 @@ const reasons = [
 
 const ReasonsILoveYou = () => {
   return (
-    <section className="py-20 px-4 md:px-8">
+    <section id="reasons" className="py-20 px-4 md:px-8">
       <div className="max-w-4xl mx-auto">
         <FadeContent blur>
           <h2 className="font-display text-4xl md:text-5xl text-center text-foreground mb-4">

@@ -9,6 +9,7 @@ import FutureMessage from "@/components/FutureMessage";
 import FloatingHearts from "@/components/FloatingHearts";
 import MusicToggle from "@/components/MusicToggle";
 import ParallaxBackground from "@/components/ParallaxBackground";
+import StickyNav from "@/components/StickyNav";
 
 const Index = () => {
   const [accepted, setAccepted] = useState(false);
@@ -47,6 +48,7 @@ const Index = () => {
       <ParallaxBackground />
       <FloatingHearts />
       <MusicToggle />
+      <StickyNav />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
