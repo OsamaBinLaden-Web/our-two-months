@@ -13,7 +13,7 @@ const moments = [
 
 const OurStory = () => {
   return (
-    <section className="py-20 px-4 bg-valentine">
+    <section id="story" className="py-20 px-4 bg-valentine">
       <div className="max-w-3xl mx-auto">
         <FadeContent blur>
           <h2 className="font-display text-4xl md:text-5xl text-center text-foreground mb-4">
