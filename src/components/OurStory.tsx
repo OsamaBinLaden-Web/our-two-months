@@ -4,11 +4,11 @@ import BlurText from "@/components/animations/BlurText";
 import FadeContent from "@/components/animations/FadeContent";
 
 const moments = [
-  { date: "December 10, 2024", title: "The day it all began", emoji: "💕" },
-  { date: "December 2024", title: "Getting to know each other", emoji: "💬" },
-  { date: "January 2025", title: "Our first month together", emoji: "🎉" },
-  { date: "January/February 2025", title: "Study dates and stolen glances", emoji: "📚" },
-  { date: "February 11, 2025", title: "Two months of us!", emoji: "❤️" },
+  { date: "December 10, 2025", title: "The day it all began", emoji: "💕" },
+  { date: "December 2025", title: "Getting to know each other", emoji: "💬" },
+  { date: "January 2026", title: "Our first month together", emoji: "🎉" },
+  { date: "January/February 2026", title: "Study dates and stolen glances", emoji: "📚" },
+  { date: "February 11, 2026", title: "Two months of us!", emoji: "❤️" },
 ];
 
 const OurStory = () => {
