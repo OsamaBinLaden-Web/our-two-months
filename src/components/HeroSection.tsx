@@ -7,7 +7,7 @@ import ShinyText from "@/components/animations/ShinyText";
 const HeroSection = () => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center px-4 bg-valentine relative overflow-hidden">
-      {/* Animated background orbs */}
+      {/* Animated background orbs */}https://github.com/OsamaBinLaden-Web/our-two-months/edit/main/src/components/HeroSection.tsx
       {[...Array(3)].map((_, i) => (
         <motion.div
           key={i}
@@ -46,7 +46,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="font-body text-xl text-muted-foreground mb-2">
-          <BlurText text="Since December 10, 2024" delay={1} />
+          <BlurText text="Since December 10, 2025" delay={1} />
         </p>
 
         <FadeContent delay={1.5} blur>
